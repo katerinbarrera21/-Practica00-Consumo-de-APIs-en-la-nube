@@ -6,53 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RECETAS</title>
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
-
-
-
+    <link rel="stylesheet" href="CSS/CSS.css">
+    <link rel="stylesheet" href="CSS/bootstrap-grid.css">
+    <script type="text/javascript" src="JS/buscar.js"></script>
 </head>
 
-<body background="">
+<body>
     <header>
-
+        <H1>BIENVIDO A NEWSAPI</H1>
+        <h2>INGRESAR SOLO NEGOCIO, BITCOIN, APPLE, TECHCRUNCH, TWSJ </h2>
     </header>
 
-    <section>
+    <section class="centrado">
+        <a href="" id="sourceLink">Volver a Cargar</a>
 
+        <div class="input-group mb-3">
+
+            <input id="search" placeholder="CATEGORIA">
+
+            <button class="btn btn-outline-secondary" onclick="elegirCategoria(document.getElementById('search').value)">Search</button>
+
+
+        </div>
+
+
+        <div class="div_container">
+            <table id="output" class="table">
+            </table>
+        </div>
 
     </section>
-    <script type="text/javascript" src="JS/buscar.js"></script>
-
-    <div class="separar">
-        <h1>INGRESA PARA BUSCAR TU RECETA</h1>
-        <input id="search">
-        <button onclick="getrecepe(document.getElementById('search').value)">Search</button>
-    </div>
-
-
-
-
-    <div id="output"></div>
-
-
-    <div id="informacion"><b>Datos de la persona</b></div>
-
-    <div id="foto"></div>
-
-
-
-
-    <a href="" id="sourceLink">cargar</a>
-
-    <script>
-        const header = document.querySelector('header');
-        const section = document.querySelector('section');
-    </script>
-
 
 
 
 
     <footer>
+        <p>Author: Katherine Barrera</p>
+        <p><a href="mailto:katerinbarrera21@gmail.com">katerinbarrera21@gmail.com</a></p>
     </footer>
 
 </body>
