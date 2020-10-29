@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECETAS</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <script type="text/javascript" src="JS/buscar.js"></script>
+
+</head>
+
+<body background="">
+    <header class="cabecera">
+        <h1>SPOONACULAR</h1>
+    </header>
+
+
+    <div class="separar">
+        <h1>INGRESA PARA BUSCAR TU RECETA</h1>
+        <input id="search">
+        <button onclick="getrecepe(document.getElementById('search').value)">Search</button>
+    </div>
+
+
+
+
+    <div id="output"></div>
+    <div id="informacion"><b>Datos de la persona</b></div>
+
+
+    <a href="" id="sourceLink">Hola</a>
+    <!--
+    <script>
+        function getsource(id) {
+            $.ajax({
+                url: "https://api.spoonacular.com/recipes/" + id + "/information?apikey=56eba43c9db54a8a800a32aafb1eb112",
+                success: function(res) {
+                    document.getElementById('sourceLink').innerHTML = res.sourceUrl
+                    document.getElementById('sourceLink').href = res.sourceUrl
+                }
+
+            });
+        }
+
+        function getrecepe(q) {
+            $.ajax({
+                url: "https://api.spoonacular.com/recipes/search?apikey=56eba43c9db54a8a800a32aafb1eb112$number=1&query=" + q,
+                success: function(res) {
+                    document.getElementById("ouput").innerHTML = "<h1>" + res.results[0].title + "</h1><br><img src='" + res.baseUri + res.results[0].image + "' width = '400'/><br>ready in" + res.results[0].readyInMinutes + "minutes"
+                    getsource(res.results[0].id)
+                }
+            });
+        }
+    </script>
+-->
+    <footer>
+
+
+    </footer>
+
+</body>
+
+</html>
