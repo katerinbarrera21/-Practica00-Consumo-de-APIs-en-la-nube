@@ -80,12 +80,16 @@ function getrecepe(urlFinal) {
             let responseJSON = JSON.parse(this.responseText);
             console.log(responseJSON);
             guardaDatos = [];
+
+
             for (let i = 0; i < responseJSON.articles.length; i++) {
                 //const element = array[i];
                 guardaDatos.push(responseJSON.articles[i]);
                 //document.getElementById("informacion").innerHTML = responseJSON.responseText;
                 console.log(responseJSON.articles[i].author);
                 console.log(responseJSON.articles[i].urlToImage);
+
+
                 //document.getElementById("foto").innerHTML = "<img id='foto' class= 'img-fluid' width= '300' heigth='300' src='" + responseJSON.articles[i].urlToImage + "' >";
             }
 
@@ -115,7 +119,7 @@ function getrecepe(urlFinal) {
 
 
 function crearTabla(datos) {
-    let keys = ['author', 'content', 'description', 'publishedAT', 'title', 'url', 'urlToImage'];
+    let keys = ['author', 'content', 'description', 'publishedAT', 'title', 'urlToImage'];
 
     console.log("keys " + keys);
     //console.log("datos primero "+datos[0].track.track_name);
@@ -152,8 +156,6 @@ function crearTabla(datos) {
             } else if (keys[j] == "title") {
                 table += "<td>" + art.title + "</td>";
 
-            } else if (keys[j] == "url") {
-                table += "<td width= '200' heigth='200'> <a href=" + url + ">" + art.url + "</a></td>";
 
             } else if (keys[j] == "urlToImage") {
                 table += "<td>  <IMG width= '200' heigth='200' SRC=" + art.urlToImage + "></td>";
